@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile.Editprofile">
+
+    <EditText
+        android:id="@+id/editname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="105dp"
+        android:ems="10"
+        android:hint="name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editadmissionno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editname"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="107dp"
+        android:ems="10"
+        android:hint="admissiono"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editphoneno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editname"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="192dp"
+        android:ems="10"
+        android:hint="                                                                                                                                                                                                                                                                         "
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:text="Button" />
+
+</RelativeLayout>

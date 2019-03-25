@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IssueBook.IssueBook">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="104dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="180dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="202dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="89dp"
+        android:text="I accept terms and agreement" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="159dp"
+        android:text="BarcodeScanner" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="58dp"
+        android:layout_height="48dp"
+        android:layout_alignEnd="@+id/checkBox"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="219dp"
+        android:gravity="center"
+        android:text="OR" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="61dp"
+        android:gravity="center"
+        android:text="Dateofissue" />
+
+    <TextView
+        android:id="@+id/Currentdate"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="0dp"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/issuebook"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-32dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toStartOf="@+id/Currentdate"
+        android:text="Issue Book" />
+
+</RelativeLayout>

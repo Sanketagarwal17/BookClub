@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Authentication.signup">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/useradmission"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:hint="name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/useradmission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="112dp"
+        android:ems="10"
+        android:hint="admission no"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/userphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="191dp"
+        android:ems="10"
+        android:hint="phnumber"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/useremail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginBottom="202dp"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/makaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="62dp"
+        android:text="Button" />
+
+    <EditText
+        android:id="@+id/userpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/useremail"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="141dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPersonName" />
+</RelativeLayout>

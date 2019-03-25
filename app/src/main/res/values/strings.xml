@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Bookclub</string>
+    <string name="profilename">profilename</string>
+    <string name="skip" />
+    <string name="start" />
+    <string name="title_activity_book_club">BookClub</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+
+
+
+
+
+
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="books_found" />
+    <string name="no_books_found" />
+</resources>
