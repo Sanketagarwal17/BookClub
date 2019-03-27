@@ -53,9 +53,6 @@ public class Allbooks extends AppCompatActivity {
         database=FirebaseDatabase.getInstance();
         databaseReference=database.getReference().child("Book name");
 
-        SharedPreferences sharedPreferences = getSharedPreferences("sharedadmission",Context.MODE_PRIVATE);
-        String sharedAdmisNo = sharedPreferences.getString("admision","1");
-        Toast.makeText(this, sharedAdmisNo, Toast.LENGTH_SHORT).show();
 
         arrayList=new ArrayList<>();
         final RecyclerView recyclerView=findViewById(R.id.allbookrecycler);

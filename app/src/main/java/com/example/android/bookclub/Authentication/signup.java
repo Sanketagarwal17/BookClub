@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -37,6 +38,7 @@ public class signup extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         firebaseAuth = FirebaseAuth.getInstance();
+        firebaseDatabase=FirebaseDatabase.getInstance();
 
 
         username = findViewById(R.id.username);
@@ -52,24 +54,37 @@ public class signup extends AppCompatActivity {
         String passwo = pass.getText().toString().trim();
 
 
-         firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
-        firebaseDatabase=FirebaseDatabase.getInstance();
-        databaseReference=firebaseDatabase.getReference("profiledetails");
 
+  /* new node for staus*/
+        ChildEventListener childEventListener;
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        final String email123 = user.getEmail();
+
+
+        DatabaseReference databaseReference=firebaseDatabase.getReference().child("Status");
+
+        databaseReference.child(email123).child("statusvalue").setValue(0).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+
+            }
+        });
+
+/*       complete here       */
+         firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
+         databaseReference=firebaseDatabase.getReference("profiledetails");
+
+        final DatabaseReference finalDatabaseReference = databaseReference;
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String namei = username.getText().toString().trim();
                 String admis = admissionno.getText().toString().trim();
-                SharedPreferences sharedPreferences = getSharedPreferences("sharedadmission",Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("admision",admis);
-                editor.apply();
                 String ph = pone.getText().toString().trim();
                 String ema = email.getText().toString().trim();
                 String passwo = pass.getText().toString().trim();
                 Signupmodel sign=new Signupmodel(namei,admis,ph,ema,passwo);
-                databaseReference.child(admis).setValue(sign).addOnCompleteListener(new OnCompleteListener<Void>() {
+                finalDatabaseReference.child(admis).setValue(sign).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful())
