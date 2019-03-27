@@ -51,7 +51,7 @@
         <activity android:name=".allbooks.AllBookMVP.AllBookMvpActivity" />
         <activity android:name=".otp.mobileverificaton" />
         <activity android:name=".RequestforMember.RequestforMember" />
-        
+
         <activity android:name=".Notifications.NotificationAdmin" />
         <activity android:name=".Status.Status" />
         <activity android:name=".ImagesUpload.ImageUpload" />
