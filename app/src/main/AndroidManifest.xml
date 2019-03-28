@@ -48,9 +48,8 @@
         <activity android:name=".Penalty.Student" />
         <activity android:name=".ReturnBook.ReturnBook" />
         <activity android:name=".Profile.Editprofile" />
-        <activity android:name=".allbooks.AllBookMVP.AllBookMvpActivity" />
         <activity android:name=".otp.mobileverificaton" />
-        
+
 
         <activity android:name=".Notifications.NotificationAdmin" />
         <activity android:name=".Status.Status" />

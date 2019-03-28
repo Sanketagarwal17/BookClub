@@ -6,14 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".addbook.Addbook">
 
+
+    <ImageButton
+        android:id="@+id/uploadimage1"
+        android:layout_width="97dp"
+        android:layout_height="70dp"
+        android:layout_alignStart="@+id/namerequest"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="23dp" />
     <EditText
         android:id="@+id/namerequest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="108dp"
         android:ems="10"
         android:inputType="textPersonName" />
 

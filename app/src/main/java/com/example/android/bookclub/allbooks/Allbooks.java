@@ -3,6 +3,7 @@ package com.example.android.bookclub.allbooks;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -20,6 +21,7 @@ import android.widget.Toast;
 import com.example.android.bookclub.DetailsofEachBook.Details;
 import com.example.android.bookclub.Main.MainActivity;
 import com.example.android.bookclub.R;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -27,6 +29,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
@@ -41,7 +45,9 @@ public class Allbooks extends AppCompatActivity {
     allbooksadapter allbooksadaptera;
     RecyclerView allbookrecycler;
     EditText search;
-
+   FirebaseStorage firebaseStorage;
+   StorageReference storageReference;
+    String doc_url;
 
 
 
@@ -52,6 +58,10 @@ public class Allbooks extends AppCompatActivity {
         allbookrecycler=(RecyclerView)findViewById(R.id.allbookrecycler);
         database=FirebaseDatabase.getInstance();
         databaseReference=database.getReference().child("Book name");
+
+        firebaseStorage = FirebaseStorage.getInstance();
+        storageReference=firebaseStorage.getReference().child("bookimages/"+System.currentTimeMillis()+".jpg");
+
 
 
         arrayList=new ArrayList<>();
@@ -105,7 +115,14 @@ public class Allbooks extends AppCompatActivity {
 
 
 
-
+        storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri)
+            {
+                Uri abc=uri;
+                 String doc_url=abc.toString();
+            }
+        });
 
 
 
@@ -115,6 +132,8 @@ public class Allbooks extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
+
+
                 arrayList.clear();
                 for(DataSnapshot ds:dataSnapshot.getChildren())
                 {
@@ -122,7 +141,7 @@ public class Allbooks extends AppCompatActivity {
                     String author=ds.child("author").getValue().toString();
                     String price=ds.child("price").getValue().toString();
 
-                    allbooksmodel=new allbooksmodel(name,author,price);
+                    allbooksmodel=new allbooksmodel(name,author,price,doc_url);
                     arrayList.add(allbooksmodel);
                 }
                 recyclerView.setAdapter(allbooksadaptera);

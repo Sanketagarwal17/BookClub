@@ -1,14 +1,22 @@
 package com.example.android.bookclub.allbooks;
 
 public class allbooksmodel {
-public String name,author,price;
+public String name,author,price,url;
 
-    public allbooksmodel(String name, String author, String price) {
+    public allbooksmodel(String name, String author, String price, String url) {
         this.name = name;
         this.author = author;
         this.price = price;
+        this.url = url;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
     public String getName() {
         return name;

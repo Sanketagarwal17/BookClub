@@ -7,12 +7,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.bookclub.DetailsofEachBook.Details;
 import com.example.android.bookclub.R;
+import com.google.firebase.database.ChildEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -24,6 +27,8 @@ import java.util.ArrayList;
 
     Context context;
     ArrayList<allbooksmodel> arrayList;
+    ChildEventListener childEventListener;
+
     public allbooksadapter(Context context, ArrayList<allbooksmodel> arrayList)
     {
         this.context=context;
@@ -47,9 +52,12 @@ import java.util.ArrayList;
         String name=allbooksmodeli.getName();
         String msg=allbooksmodeli.getAuthor();
         String prc=allbooksmodeli.getPrice();
+        String photourl=allbooksmodeli.getUrl();
         viewHolder.name.setText(name);
         viewHolder.author.setText(msg);
         viewHolder.price.setText(prc);
+        Picasso.get().load(photourl).into(viewHolder.bookimage);
+
 
        viewHolder.allbooklayout1.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -83,6 +91,7 @@ import java.util.ArrayList;
     public class ViewHolder extends RecyclerView.ViewHolder
     {
         TextView name,author,price;
+        ImageView bookimage;
          public  RelativeLayout allbooklayout1;
         public ViewHolder(@NonNull View itemView)
         {
@@ -92,6 +101,7 @@ import java.util.ArrayList;
             author=itemView.findViewById(R.id.readauthor);
             price=itemView.findViewById(R.id.readprice);
            allbooklayout1=itemView.findViewById(R.id.allbooklayout);
+           bookimage=itemView.findViewById(R.id.imagebook);
         }
     }
 }

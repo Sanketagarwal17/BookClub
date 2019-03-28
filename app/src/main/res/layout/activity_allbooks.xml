@@ -18,9 +18,10 @@
     <EditText
         android:id="@+id/search"
         android:layout_width="match_parent"
-        android:layout_height="68dp"
+        android:layout_height="214dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
         android:ems="10"
         android:hint="Search"
         android:inputType="textPersonName" />

@@ -5,20 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="60dp">
 
+
+    <ImageView
+        android:id="@+id/imagebook"
+        android:layout_width="53dp"
+        android:layout_height="match_parent"
+        android:layout_alignStart="@+id/readauthor"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="234dp"
+        android:layout_marginBottom="0dp" />
     <TextView
         android:id="@+id/readprice"
         android:layout_width="118dp"
         android:layout_height="85dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="68dp"
         android:text="TextView"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp" />
 
     <TextView
         android:id="@+id/readname"
-        android:layout_width="95dp"
-        android:layout_height="77dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="0dp"
         android:text="TextView"
         tools:layout_editor_absoluteX="151dp"
         tools:layout_editor_absoluteY="16dp" />
@@ -27,8 +42,10 @@
         android:id="@+id/readauthor"
         android:layout_width="108dp"
         android:layout_height="81dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="0dp"
         android:text="TextView"
         tools:layout_editor_absoluteX="256dp"
         tools:layout_editor_absoluteY="16dp" />

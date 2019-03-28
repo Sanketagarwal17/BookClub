@@ -4,8 +4,15 @@ public class Addbookmodel {
 
     public String name;
     public String author;
-    public String price,bookid,totalnumberofbook;
+    public String price,bookid,totalnumberofbook,photourl;
 
+    public String getPhotourl() {
+        return photourl;
+    }
+
+    public void setPhotourl(String photourl) {
+        this.photourl = photourl;
+    }
 
     public String getBookid() {
         return bookid;
@@ -47,11 +54,12 @@ public class Addbookmodel {
         this.price = price;
     }
 
-    public Addbookmodel(String name, String author, String price, String bookid, String totalnumberofbook) {
+    public Addbookmodel(String name, String author, String price, String bookid, String totalnumberofbook, String photourl) {
         this.name = name;
         this.author = author;
         this.price = price;
         this.bookid = bookid;
         this.totalnumberofbook = totalnumberofbook;
+        this.photourl = photourl;
     }
 }
