@@ -52,20 +52,6 @@ Button submit;
         submit=findViewById(R.id.submitverify);
         StartFirebaseLogin();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         findViewById(R.id.generateotp).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,18 +95,8 @@ Button submit;
 
 
 
-
-
-
-
             }
         });
-
-
-
-
-
-
 
 
 

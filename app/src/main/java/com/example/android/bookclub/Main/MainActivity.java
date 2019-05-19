@@ -15,7 +15,6 @@ import com.example.android.bookclub.Profile.Profile;
 import com.example.android.bookclub.R;
 import com.example.android.bookclub.acceptedrequest.acceptedrequest;
 import com.example.android.bookclub.addbook.Addbook;
-import com.example.android.bookclub.allbooks.AllBookMVP.AllBookMvpActivity;
 import com.example.android.bookclub.allbooks.Allbooks;
 import com.example.android.bookclub.otp.mobileverificaton;
 import com.example.android.bookclub.requestbook.requestbook;
@@ -59,12 +58,6 @@ public class MainActivity extends AppCompatActivity {
        });
 
 
-        findViewById(R.id.mvpcheck).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,AllBookMvpActivity.class));
-            }
-        });
 
         findViewById(R.id.changep).setOnClickListener(new View.OnClickListener() {
             @Override

@@ -3,7 +3,9 @@ package com.example.android.bookclub.DetailsofEachBook;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telecom.Call;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.android.bookclub.R;
 import com.google.firebase.auth.FirebaseUser;
@@ -65,7 +67,7 @@ public class Details extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                Toast.makeText(Details.this,databaseError.getMessage(),Toast.LENGTH_LONG).show();
             }
         });
 

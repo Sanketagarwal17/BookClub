@@ -19,13 +19,12 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class login extends AppCompatActivity implements LoginContracter.LoginPresenter {
+public class login extends AppCompatActivity {
 
     EditText username, password;
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
 
-    LoginPresenter loginPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -47,19 +46,10 @@ public class login extends AppCompatActivity implements LoginContracter.LoginPre
      */
 
 
-    loginPresenter=new LoginPresenter();
 
 
 
     }
-
-
-
-
-
-
-
-
 
     public void login(View view) {
         String user = username.getText().toString().trim();

@@ -66,26 +66,6 @@ public class ChangePassword extends AppCompatActivity {
                 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             }
         });
 

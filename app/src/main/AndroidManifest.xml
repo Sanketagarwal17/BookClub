@@ -49,12 +49,12 @@
         <activity android:name=".ReturnBook.ReturnBook" />
         <activity android:name=".Profile.Editprofile" />
         <activity android:name=".otp.mobileverificaton" />
-
-
         <activity android:name=".Notifications.NotificationAdmin" />
         <activity android:name=".Status.Status" />
         <activity android:name=".ImagesUpload.ImageUpload" />
-        <activity android:name=".ImagesUpload.ShowImagesActivity"></activity>
+        <activity android:name=".ImagesUpload.ShowImagesActivity" />
+        <activity android:name=".Requestformember.Requestformember" />
+        <activity android:name=".Requestformember.Admin"></activity>
     </application>
 
 </manifest>
